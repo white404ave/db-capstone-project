@@ -26,7 +26,13 @@ CREATE TABLE `orders` (
   `OrderDate` date NOT NULL,
   `Quantity` int NOT NULL,
   `TotalCost` decimal(10,0) NOT NULL,
-  PRIMARY KEY (`OrderDate`)
+  `MenuID` int NOT NULL,
+  `CustomerID` int NOT NULL,
+  PRIMARY KEY (`OrderDate`),
+  KEY `fk_MenuID_idx` (`MenuID`),
+  KEY `fk_CustomerID_idx` (`CustomerID`),
+  CONSTRAINT `fk_CustomerID` FOREIGN KEY (`CustomerID`) REFERENCES `customerdetail` (`CustomerID`),
+  CONSTRAINT `fk_MenuID` FOREIGN KEY (`MenuID`) REFERENCES `menu` (`MenuId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -48,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-15 20:25:23
+-- Dump completed on 2023-10-15 21:11:17

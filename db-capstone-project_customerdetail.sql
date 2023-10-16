@@ -23,9 +23,11 @@ DROP TABLE IF EXISTS `customerdetail`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `customerdetail` (
-  `CustomerName` varchar(255) NOT NULL,
-  `ContactDetails` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`CustomerName`)
+  `CustomerID` int NOT NULL,
+  `FullName` varchar(255) NOT NULL,
+  `ContactNumber` varchar(255) NOT NULL,
+  `Email` varchar(255) NOT NULL,
+  PRIMARY KEY (`CustomerID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -47,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-15 20:25:23
+-- Dump completed on 2023-10-15 21:11:17
