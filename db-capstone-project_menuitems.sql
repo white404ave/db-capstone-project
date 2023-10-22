@@ -16,30 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `menu`
+-- Table structure for table `menuitems`
 --
 
-DROP TABLE IF EXISTS `menu`;
+DROP TABLE IF EXISTS `menuitems`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `menu` (
-  `MenuId` int NOT NULL,
+CREATE TABLE `menuitems` (
   `MenuItemsID` int NOT NULL,
-  `MenuName` varchar(45) NOT NULL,
-  `Cuisine` varchar(45) NOT NULL,
-  PRIMARY KEY (`MenuId`),
-  KEY `fk_MenuItemsID_idx` (`MenuItemsID`),
-  CONSTRAINT `fk_MenuItemsID` FOREIGN KEY (`MenuItemsID`) REFERENCES `menuitems` (`MenuItemsID`)
+  `Courses` varchar(45) NOT NULL,
+  `Starters` varchar(45) NOT NULL,
+  `Drinks` varchar(45) NOT NULL,
+  `Desserts` varchar(45) NOT NULL,
+  PRIMARY KEY (`MenuItemsID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `menu`
+-- Dumping data for table `menuitems`
 --
 
-LOCK TABLES `menu` WRITE;
-/*!40000 ALTER TABLE `menu` DISABLE KEYS */;
-/*!40000 ALTER TABLE `menu` ENABLE KEYS */;
+LOCK TABLES `menuitems` WRITE;
+/*!40000 ALTER TABLE `menuitems` DISABLE KEYS */;
+/*!40000 ALTER TABLE `menuitems` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
