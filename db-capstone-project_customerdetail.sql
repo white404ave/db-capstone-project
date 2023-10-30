@@ -37,6 +37,7 @@ CREATE TABLE `customerdetail` (
 
 LOCK TABLES `customerdetail` WRITE;
 /*!40000 ALTER TABLE `customerdetail` DISABLE KEYS */;
+INSERT INTO `customerdetail` VALUES (1,'John','6666666666','ramble@coursera.com'),(2,'Chris','555555555555555555555','ramble@coursera.com'),(3,'Him','3333333333333333','ramble'),(4,'Her','22222222222222222','Ramble');
 /*!40000 ALTER TABLE `customerdetail` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-15 21:11:17
+-- Dump completed on 2023-10-15 23:09:29

@@ -28,7 +28,8 @@ CREATE TABLE `orders` (
   `TotalCost` decimal(10,0) NOT NULL,
   `MenuID` int NOT NULL,
   `CustomerID` int NOT NULL,
-  PRIMARY KEY (`OrderDate`),
+  `OrderID` int NOT NULL,
+  PRIMARY KEY (`OrderID`),
   KEY `fk_MenuID_idx` (`MenuID`),
   KEY `fk_CustomerID_idx` (`CustomerID`),
   CONSTRAINT `fk_CustomerID` FOREIGN KEY (`CustomerID`) REFERENCES `customerdetail` (`CustomerID`),
@@ -54,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-15 21:11:17
+-- Dump completed on 2023-10-15 23:09:29

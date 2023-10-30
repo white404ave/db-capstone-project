@@ -25,10 +25,10 @@ DROP TABLE IF EXISTS `deliverystatus`;
 CREATE TABLE `deliverystatus` (
   `DeliveryDate` date NOT NULL,
   `Status` varchar(25) DEFAULT NULL,
-  `OrderDate` date NOT NULL,
+  `OrderID` int NOT NULL,
   PRIMARY KEY (`DeliveryDate`),
-  KEY `fk_OrderDate_idx` (`OrderDate`),
-  CONSTRAINT `fk_OrderDate` FOREIGN KEY (`OrderDate`) REFERENCES `orders` (`OrderDate`)
+  KEY `fk_OrderID_idx` (`OrderID`),
+  CONSTRAINT `fk_OrderID` FOREIGN KEY (`OrderID`) REFERENCES `orders` (`OrderID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-15 21:11:16
+-- Dump completed on 2023-10-15 23:09:28
